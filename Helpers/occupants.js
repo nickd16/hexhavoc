@@ -4,6 +4,9 @@ class Occupant {
        this.igoid;
        this.board;
     }
+    moveTo(tile){
+        this.tile = tile;
+    }
 }
 /*                                       */
 class Terrain extends Occupant {
@@ -11,6 +14,7 @@ class Terrain extends Occupant {
         this.TR;
     }
 }
+
 class Primary extends Terrain {
 
 }

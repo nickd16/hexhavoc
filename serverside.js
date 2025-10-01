@@ -168,7 +168,7 @@ class Server {
             console.error('WebSocket server error:', error);
         });
     }
-    request(client, requestType,requestData, whenFinished = ()=>{}, timeout = 10000){
+    request(client, requestType,requestData, whenFinished = (data,ercode)=>{}, timeout = 10000){
         this.activeRequests++;
         let hname =  client.id  + "tm" + Date.now() +  "___REQUESTS___" + this.activeRequests;
         client.WSL.forEach(ws=> 
