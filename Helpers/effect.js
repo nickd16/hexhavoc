@@ -9,6 +9,7 @@ function split(str=""){
         if (str[i] == " " && !depth) {
             if (cur.length) sf+= cur;
             cur = "";
+        }else if (str[i] == "("){
             if (depth) cur+="(";
             depth+=1;
         }else if (str[i]==")"){
